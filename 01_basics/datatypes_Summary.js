@@ -41,3 +41,36 @@ console.log(typeof heroes);
 
 // dynamically typed language
 //        JavaScript is a dynamically typed language,    which means that data types of variables are determined by the value they hold at runtime and can change throughout the program as we assign different values to them
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+// memory is of 2 types 
+// stack And heap
+// Stack (Primitive types) and heap (Non pimitive types )
+//  stack gives the copy value of the actual value 
+// heap gives the refrence value of the actual value
+
+let myName = "priyanshu@gmail.com"
+ 
+let anoetherName = myName
+anoetherName="Vecna@gmail.com"
+
+console.log(myName);
+console.log(anoetherName);
+// Output
+// priyanshu@gmail.com
+// Vecna@gmail.com
+let objOne={
+     email: "priyansh@gmail.com",
+}
+let objTwo=objOne
+objTwo.email="vecna@gmail.com"
+console.log(objOne)
+console.log(objTwo)
+//output
+// { email: 'vecna@gmail.com' }
+// { email: 'vecna@gmail.com' }
