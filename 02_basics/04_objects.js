@@ -1,11 +1,11 @@
 // const tinderUser=new Object()
 
 
- const tinderUser={}
+//  const tinderUser={}
 
- tinderUser.id="123abc"
- tinderUser.name="Sammy"
- tinderUser.isLoggedIn=false
+//  tinderUser.id="123abc"
+//  tinderUser.name="Sammy"
+//  tinderUser.isLoggedIn=false
 
 // console.log(tinderUser);
 
@@ -63,34 +63,79 @@
 /* How to handle objects which come from data
 mostly the the data which comes from the serer is in the form of array objects */
 //Ex
-const users =[
-    {
-        id:"123abc",
-        name:"Vecna",
-    },
-    {
-        id:"456qwe",
-        name:"Utu" 
-    }
+// const users =[
+//     {
+//         id:"123abc",
+//         name:"Vecna",
+//     },
+//     {
+//         id:"456qwe",
+//         name:"Utu" 
+//     }
+// ]
+
+// console.log(users[1].name);
+
+
+
+
+
+// console.log(tinderUser);//{ id: '123abc', name: 'Sammy', isLoggedIn: false }
+// console.log(Object.keys(tinderUser));//[ 'id', 'name', 'isLoggedIn' ]
+// //the point to be noted in output is that the return type is in array
+// console.log(Object.values(tinderUser));
+
+
+// console.log(Object.entries(tinderUser));//[ [ 'id', '123abc' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false ] ]
+
+
+
+// console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+
+
+
+
+
+
+// Destructing of the object
+const course=
+{
+    courseName:"js in hindi",
+    price:"999",
+    courseInstructor: "Hitesh"
+}
+
+
+//console.log(course.courseInstructor);// this is a usual way the another way which most person use is 
+
+
+const {courseInstructor:ins}=course
+
+console.log(ins);
+
+//Json is nothing but object without name
+//proper struture of a json
+
+// {
+//     "nam":"hitesh",
+//     "course":"js in hindi",
+//     "fees":"free"
+//}
+
+
+// for Json Practice there is a site random user me
+
+[
+    {},
+    {},
+    {}
 ]
 
-console.log(users[1].name);
 
 
 
 
 
-console.log(tinderUser);//{ id: '123abc', name: 'Sammy', isLoggedIn: false }
-console.log(Object.keys(tinderUser));//[ 'id', 'name', 'isLoggedIn' ]
-//the point to be noted in output is that the return type is in array
-console.log(Object.values(tinderUser));
-
-
-console.log(Object.entries(tinderUser));//[ [ 'id', '123abc' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false ] ]
-
-
-
-console.log(tinderUser.hasOwnProperty("isLoggedIn"));
 
 
 
