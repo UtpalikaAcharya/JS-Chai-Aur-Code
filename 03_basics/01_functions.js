@@ -34,27 +34,63 @@
 
 
 
-function loginUserMessage(username)
+// function loginUserMessage(username)
+// {
+//     if(username===undefined)
+//     {
+// console.log("Please enter a user name");
+// return
+//     }
+//     return `${username} just logged in`
+// }
+// console.log(loginUserMessage())
+
+
+
+// //another way used in reality
+
+// function loginUserMessage(username = "sam"){
+//     if(!username){
+//         console.log("PLease enter a username");
+//         return
+//     }
+//     return `${username} just logged in`
+// }
+
+
+//
+
+/*
+Basically here we are defining the way how shopping cart works because there we dont know how many number of arguments  we need to pass as parameters in the function creation 
+*/
+
+function calculateCartPrice(...num1 ) // this ... three dots is rest operator used to handle this type of conditiohn
 {
-    if(username===undefined)
-    {
-console.log("Please enter a user name");
-return
-    }
-    return `${username} just logged in`
+   return num1
 }
-console.log(loginUserMessage())
+console.log(calculateCartPrice(2,3,4));
 
-
-
-//another way used in reality
-
-function loginUserMessage(username = "sam"){
-    if(!username){
-        console.log("PLease enter a username");
-        return
-    }
-    return `${username} just logged in`
+const user=
+{
+    userName: " Hitesh",
+    price :199
 }
 
+function handleObject(anyObject)
+{
+    console.log(`Username is ${anyObject.userName} and price is ${anyObject.price}`);
+}
 
+handleObject(user)
+
+
+const myArray=new Array(1,2,3,4,5)
+console.log(myArray);
+
+
+function returnSecondValue(getArray)
+{
+    return getArray[1]
+}
+
+console.log(returnSecondValue(myArray))
