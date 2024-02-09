@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur code</title>
+    <style>
+        ul{
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body bgcolor="black">
+    <ul class="language">
+        <li>JavaScript</li> 
+    </ul>
+</body>
+<script>
+    // To add the li in the ul tag
+    // const li =document.createElement("li")
+    // li.innerHTML="Python"
+    // const ul=document.querySelector('ul')
+    // ul.appendChild(li)
+
+    // Now instead of adding one one element by this method we can create a function for this
+
+
+    function addLanguage (langName)
+    {
+    const li =document.createElement("li")
+    li.innerHTML=langName
+    const ul=document.querySelector('.language')
+    ul.appendChild(li)
+    }
+
+    addLanguage("Python")
+    addLanguage("Java")
+    addLanguage("TypeScript")
+
+
+
+
+    function addOptiLanguaage(langName)
+    {
+        const li =document.createElement("li")
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    
+    addOptiLanguaage("Ruby")
+    addOptiLanguaage("C++")
+    
+
+    /* So the basic difference between the two functions which we have created up well before the function in which we have used dot inner html if this when we use the dot innerhtm function it traverses the whole tree in the order so it takes a lot of time but it gives the node on the console or engine so it does not reflect in basic projects but it will be a it can be a major issue when we create a complex or built curve widgets that's why good companies and the good approach is used is to use app and child and document create text node because this method or this process does not travels the full tree whereas it just happens at the last of the trail*/
+     
+    //Edit
+     const secondLang=document.querySelector("li:nth-child(2)")
+     //secondLang.innerHTML="Mojo"
+     //This approach is also good but it does not but it is not good practice because it traverses the whole tree so it takes more time or it creates a load on the engine
+
+     const newLi= document.createElement("li")
+     newLi.textContent="Mojo"
+     secondLang.replaceWith(newLi)
+
+     //edit the first li
+     const firstLang=document.querySelector("li")
+     //firstLang.innerHTML="GoLang"
+     
+     firstLang.outerHTML="<li>TypeScript</li>"
+
+
+    //  const newLi2=document.createElement("li")
+    //  newLi2.textContent="GoLang"
+    //  firstLang.replaceWith(newLi2)
+
+
+
+    ///remove
+    const lastLang=document.querySelector("li:last-child")
+    lastLang.remove()
+
+</script>
+</html> 

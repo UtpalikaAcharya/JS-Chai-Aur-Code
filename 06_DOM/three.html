@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+const div1 =document.createElement('div')
+console.log(div1);
+div1.className="main"
+div1.id=Math.floor(Math.random()*10+1)
+div1.setAttribute("title","generated title")
+div1.setAttribute("height","100px")
+div1.setAttribute("width","100px")
+// div1.setAttribute("backgroundColor","red")//this line doesnt work
+div1.style.backgroundColor="red"// This method is not preferred over the day one dot set attribute method because this method first brings the value which is already put inside the tag then overwrites it but in the set attribute method the we directly go to that tag and overwrite it so one round is less used so our code is more optimized
+// div1.innerHTML="Chai aur code"
+const addText =document.createTextNode("CHAI AUR CODE")
+div1.appendChild(addText)
+document.body.appendChild(div1)
+
+
+
+</script>
+
+</html>
